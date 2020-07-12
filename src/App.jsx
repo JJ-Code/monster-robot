@@ -2,6 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react';
 import CardList from "./components/card-list/CardList";
 import SearchBox from "./components/search-box/SearchBox";
 import Scroll from "./components/scroll/Scroll";
+import ErrorBoundry from "./components/ErrorBoundry/ErrorBoundry";
 //import { robots } from './robots';
 
 import './App.css';
@@ -43,8 +44,8 @@ const App = () => {
   console.log(robotFriends);
 
   return (
- 
-    
+
+
     <div className='App tc'>
       <h1 className='f1'>Robot Friends</h1>
 
@@ -52,8 +53,10 @@ const App = () => {
         (<Fragment>
           <SearchBox onSearchChange={onSearchChange} />
           <Scroll>
-            <CardList robots={robotFriends} />
-            </Scroll>
+            <ErrorBoundry>
+              <CardList robots={robotFriends} />
+            </ErrorBoundry>
+          </Scroll>
         </Fragment>)}
     </div>
   );
