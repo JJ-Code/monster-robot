@@ -1,7 +1,6 @@
 import { combineReducers } from "redux";
-import searchReducer from './searchReducer';
 import robotsReducer from "./robotsReducer";
-
+//import searchReducer from './searchReducer';
 
 
 export default combineReducers({
