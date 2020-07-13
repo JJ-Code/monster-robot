@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "be273c4ac8fa2f9a19bf227dca08047e",
+    "revision": "e3b347a2cb104034c510f79eba220b5d",
     "url": "/monster-robot/index.html"
   },
   {
-    "revision": "a449ba6b0f188472d466",
+    "revision": "2b42cf43343ba0b5252b",
     "url": "/monster-robot/static/css/2.3c03f26f.chunk.css"
   },
   {
-    "revision": "879021c27cd6fc00a094",
+    "revision": "6d60a48d70ca8f290c68",
     "url": "/monster-robot/static/css/main.50f4df10.chunk.css"
   },
   {
-    "revision": "a449ba6b0f188472d466",
-    "url": "/monster-robot/static/js/2.193ca379.chunk.js"
+    "revision": "2b42cf43343ba0b5252b",
+    "url": "/monster-robot/static/js/2.37e2ba63.chunk.js"
   },
   {
-    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/monster-robot/static/js/2.193ca379.chunk.js.LICENSE.txt"
+    "revision": "c64c486544348f10a6d6c716950bc223",
+    "url": "/monster-robot/static/js/2.37e2ba63.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "879021c27cd6fc00a094",
-    "url": "/monster-robot/static/js/main.9910b548.chunk.js"
+    "revision": "6d60a48d70ca8f290c68",
+    "url": "/monster-robot/static/js/main.64ab953d.chunk.js"
   },
   {
     "revision": "d825840f65bf842b19e0",
