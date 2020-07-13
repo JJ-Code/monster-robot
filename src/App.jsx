@@ -3,23 +3,25 @@ import CardList from "./components/card-list/CardList";
 import SearchBox from "./components/search-box/SearchBox";
 import Scroll from "./components/scroll/Scroll";
 import ErrorBoundry from "./components/ErrorBoundry/ErrorBoundry";
-//import { robots } from './robots';
-
+import { connect } from 'react-redux';
+import { setSearchField } from "./actions/actions";
 import './App.css';
+//import { robots } from './data/robots';
 
 
-const App = () => {
+
+
+const App = ({ search: { searchField }, setSearchField }) => {
   const initalState = {
-    robotFriends: [],
-    searchField: "",
+    robotFriends: []
   }
   const [robotSearch, setRobotSearch] = useState(initalState)
-  const { robotFriends, searchField } = robotSearch;
+  const { robotFriends } = robotSearch;
 
   const fetchRobots = () => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
-      .then(robots => setRobotSearch({ robotFriends: robots, searchField: "" }))
+      .then(robots => setRobotSearch({ robotFriends: robots }))
   }
 
   useEffect(() => {
@@ -29,12 +31,15 @@ const App = () => {
   }, [])
 
 
+
   const onSearchChange = (e) => {
     e.preventDefault();
     if (e.target.value !== '') {
       //console.log(e.target.value);
+      setSearchField(e.target.value)
+      console.log(searchField);
       let results = robotFriends.filter(robotFriend => robotFriend.name.toLowerCase().includes(searchField.toLowerCase()))
-      setRobotSearch({ ...robotSearch, robotFriends: results, searchField: e.target.value }
+      setRobotSearch({ robotFriends: results }
       )
     } else {
       fetchRobots();
@@ -44,8 +49,6 @@ const App = () => {
   console.log(robotFriends);
 
   return (
-
-
     <div className='App tc'>
       <h1 className='f1'>Robot Friends</h1>
 
@@ -59,7 +62,13 @@ const App = () => {
           </Scroll>
         </Fragment>)}
     </div>
+
+
   );
 };
 
-export default App;
+const mapStateToProps = state => ({
+  search: state.search
+});
+
+export default connect(mapStateToProps, { setSearchField })(App);
