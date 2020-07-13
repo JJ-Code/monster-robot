@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SearchBox = ({ onSearchChange }) => {
-  console.log(onSearchChange);
+
 
   return (
     <div className='p2'>
