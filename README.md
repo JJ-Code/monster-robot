@@ -9,4 +9,5 @@ This app is written using Functional components and not Class.
 3)Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Or go to the link below to preview
-[http://localhost:3000](http://localhost:3000)
+
+[https://jj-code.github.io/monster-robot/](https://jj-code.github.io/monster-robot/)
