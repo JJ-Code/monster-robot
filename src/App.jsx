@@ -4,7 +4,7 @@ import SearchBox from "./components/search-box/SearchBox";
 import Scroll from "./components/scroll/Scroll";
 import ErrorBoundry from "./components/ErrorBoundry/ErrorBoundry";
 import { connect } from 'react-redux';
-import { fetchRobots, setCurrentRobots  } from "./actions/robotsActions";
+import { fetchRobots, setCurrentRobots } from "./actions/robotsActions";
 import './App.css';
 //import { robots } from './data/robots';
 //import { setSearchField } from "./actions/searchActions";
@@ -32,7 +32,7 @@ const App = ({ robots: { robotFriends }, fetchRobots, setCurrentRobots }) => {
     }
   }
 
-  console.log(robotFriends);
+  //console.log(robotFriends);
 
   return (
     <div className='App tc'>
