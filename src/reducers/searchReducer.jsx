@@ -1,19 +1,21 @@
-import { SET_SEARCHFIELD } from "../actions/types";
-
-const initialState = {
-  searchField: ""
-}
 
 
-export default (state = initialState, action) => {
-switch (action.type) {
-  case SET_SEARCHFIELD:
-    return {
-      ...state,
-      searchField: action.payload
-    };
+// import { SET_SEARCH_FIELD } from "../actions/types";
 
-  default:
-    return state;
-}
-}
+// const initialState = {
+//   searchField: ""
+// }
+
+
+// export default (state = initialState, action) => {
+// switch (action.type) {
+//   case SET_SEARCH_FIELD:
+//     return {
+//       ...state,
+//       searchField: action.payload
+//     };
+
+//   default:
+//     return state;
+// }
+// }

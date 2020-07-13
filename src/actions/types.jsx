@@ -1,1 +1,5 @@
-export const SET_SEARCHFIELD = 'SET_SEARCHFIELD';
+export const GET_ROBOTS = 'GET_ROBOTS';
+export const ROTBOTS_ERROR = 'ROTBOTS_ERROR';
+export const SET_CURRENT_ROBOTS = 'SET_CURRENT_ROBOTS';
+
+//export const SET_SEARCH_FIELD = 'SET_SEARCH_FIELD';
