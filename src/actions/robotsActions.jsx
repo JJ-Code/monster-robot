@@ -19,8 +19,8 @@ export const fetchRobots = () => async dispatch => {
 };
 
 
-// Set current log
-export const setCurrentRobots = search_val => {
+// Set current search
+export const setCurrentSearch = search_val => {
   console.log(search_val);
   
   return {
