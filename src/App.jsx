@@ -4,14 +4,14 @@ import SearchBox from "./components/search-box/SearchBox";
 import Scroll from "./components/scroll/Scroll";
 import ErrorBoundry from "./components/ErrorBoundry/ErrorBoundry";
 import { connect } from 'react-redux';
-import { fetchRobots, setCurrentRobots } from "./actions/robotsActions";
+import { fetchRobots, setCurrentSearch } from "./actions/robotsActions";
 import './App.css';
 //import { robots } from './data/robots';
 //import { setSearchField } from "./actions/searchActions";
 
 
 
-const App = ({ robots: { robotFriends }, fetchRobots, setCurrentRobots }) => {
+const App = ({ robots: { robotFriends, noResults }, fetchRobots, setCurrentSearch }) => {
 
 
   useEffect(() => {
@@ -23,13 +23,7 @@ const App = ({ robots: { robotFriends }, fetchRobots, setCurrentRobots }) => {
 
   const onSearchChange = (e) => {
     e.preventDefault();
-    if (e.target.value !== '') {
-      //console.log(e.target.value);
-      setCurrentRobots(e.target.value)
-
-    } else {
-      fetchRobots();
-    }
+    setCurrentSearch(e.target.value)
   }
 
   //console.log(robotFriends);
@@ -42,7 +36,7 @@ const App = ({ robots: { robotFriends }, fetchRobots, setCurrentRobots }) => {
           <SearchBox onSearchChange={onSearchChange} />
           <Scroll>
             <ErrorBoundry>
-              <CardList robots={robotFriends} />
+              {(noResults === true) ? (<h2>No results...</h2>) : (<CardList robots={robotFriends} />)}
             </ErrorBoundry>
           </Scroll>
         </Fragment>)}
@@ -56,4 +50,4 @@ const mapStateToProps = state => ({
   robots: state.robots
 });
 
-export default connect(mapStateToProps, { fetchRobots, setCurrentRobots })(App);
+export default connect(mapStateToProps, { fetchRobots, setCurrentSearch })(App);
