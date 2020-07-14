@@ -1,6 +1,6 @@
 ## Monster Robot
 
-This app is written using Functional components and not Class.
+This app is written using Functional components and not Class using Redux to manage state.
 
 ## To view on your local
 
