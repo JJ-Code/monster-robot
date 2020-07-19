@@ -6,6 +6,7 @@ import ErrorBoundry from "./components/ErrorBoundry/ErrorBoundry";
 import { connect } from 'react-redux';
 import { fetchRobots, setCurrentSearch } from "./actions/robotsActions";
 import './App.css';
+
 //import { robots } from './data/robots';
 //import { setSearchField } from "./actions/searchActions";
 
