@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { setCurrentSearch } from "../../actions/robotsActions";
 
 const Header = ({ setCurrentSearch }) => {
-  console.log("header");
   const onSearchChange = (e) => {
     e.preventDefault();
     setCurrentSearch(e.target.value)
